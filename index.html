@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <title>From scratch v1</title>
+
+  <meta charset="utf-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+  <script>// Get the modal
+	var modal = document.getElementById('myModal');
+
+	// Get the image and insert it inside the modal - use its "alt" text as a caption
+	var img = document.getElementById('myImg');
+	var modalImg = document.getElementById("img01");
+	var captionText = document.getElementById("caption");
+
+	img.onclick = function(){
+	    modal.style.display = "block";
+	    modalImg.src = this.src;
+	    captionText.innerHTML = this.alt;
+	}
+
+	// Get the <span> element that closes the modal
+	var span = document.getElementsByClassName("close")[0];
+
+	// When the user clicks on <span> (x), close the modal
+	span.onclick = function() { 
+		modal.style.display = "none";
+	}
+</script>
+
+<script>$(function () {
+	$('[data-toggle="tooltip"]').tooltip()
+})
+</script>
+
+<script>$('#myCollapsible').collapse({
+	toggle: false
+})</script>
+
+
+</head>
+<body>
+
+<div class='container-fluid'>
+
+	<!-- Left column -->
+	<div class='col-md-3' >
+		<div class='logo'></div>
+		<div class="naviButtonActive">home</div>
+		
+		<div class="naviButton" data-toggle="collapse" data-target="#about" aria-expanded="false" aria-controls="contacts">about</div>
+			<div class="collapse" id="about">
+				<div class="well" style="width: 300px">
+    				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sagittis arcu non est egestas malesuada. Cras facilisis fermentum est, non imperdiet ligula fermentum in.
+				</div>
+			</div>
+
+		<div class="naviButton">blog</div>
+		<div class="naviButton">services</div>
+		
+		<div class="naviButton" data-toggle="collapse" data-target="#contacts" aria-expanded="false" aria-controls="contacts">Contact</div>
+			<div class="collapse" id="contacts">
+				<div class="well" style="width: 300px">
+    				Email: example@gmail.com <br>
+    				Mob: +37060000000
+				</div>
+			</div>
+		
+		<div class="naviButton" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">Filter</div>
+
+		<div class="socialIcon">
+			<a href="#"><img src="images/fb.png" title="Find us on Facebook" ></a>
+			<a href="#"><img src="images/twitter.png" title="Find us on Twitter"></a>
+		</div>
+
+	</div>
+	<!-- Left column end-->
+
+
+	<!-- Center column -->
+	<div class='col-md-8'>
+		<!-- Trigger the Modal -->
+	<img id="myImg" src="images/grey.png" alt="" width="405" height="311">
+	<img id="myImg" src="images/grey.png" alt="" width="405" height="311">
+	<img id="myImg" src="images/grey.png" alt="" width="405" height="311">
+	<img id="myImg" src="images/middle.png" alt="" width="405" height="311">
+	<img id="myImg" src="images/grey.png" alt="" width="405" height="311">
+	<img id="myImg" src="images/grey.png" alt="" width="405" height="311">
+	
+	<!-- The Modal -->
+	<div id="myModal" class="modal">
+
+ 	 <!-- The Close Button -->
+  	<span class="close" onclick="document.getElementById('myModal').style.display='none'">&times;</span>
+
+	<!-- Modal Content (The Image) -->
+	<img class="modal-content" id="img01">
+
+  	<!-- Modal Caption (Image Text) -->
+  	<div id="caption"></div>
+	</div>
+				
+	</div>
+	<!-- Center column end-->
+
+	<div class='col-md-1'>
+		<div class="info" data-toggle="tooltip" data-placement="bottom" title="Email: example@gmail.com"></div>
+
+	</div>
+
+
+
+	</div>
+
+</body>
+</html>
